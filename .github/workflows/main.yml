@@ -6,12 +6,15 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!!"
-      - name: create a directory
-        run: mkdir sample
-      - name: create a file
-        run: touch file1
-      - name: list
+        
+      - name: checkout repository
+        uses: actions/checkout@v5
+
+      - name: list the content
         run: ls -ltr
+
+      - name: Execute shell
+        run: sh sample.sh
   my-job2:
     needs : my-job
     runs-on: ubuntu-latest
