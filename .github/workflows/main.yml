@@ -6,3 +6,9 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!!"
+      - name: create a directory
+        run: mkdir sample
+      - name: create a file
+        run: touch file1
+      - name: list
+        run: ls -ltr
