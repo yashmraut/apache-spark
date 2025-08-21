@@ -12,3 +12,14 @@ jobs:
         run: touch file1
       - name: list
         run: ls -ltr
+  my-job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Hello World!!"
+      - name: create a directory
+        run: mkdir sample2
+      - name: create a file
+        run: touch file2
+      - name: list
+        run: ls -ltr
